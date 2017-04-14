@@ -48,7 +48,7 @@ TCFs (see fig-velocity-tco_ and fig-velocity-tcf_, the trailing losses
 are significant.
 
 The resulting simulated observations (a subset of all possible
-ephemerides, where *V*<24.5 and covering a ten year period) were then
+ephemerides, where *V* <24.5 and covering a ten year period) were then
 evaluated for discovery possibility and length of observational arc
 using MAF, and all observations with SNR>5 were run through MOPS.
 
@@ -109,9 +109,34 @@ MAF Results
 We used MAF to look for series of observations which could potentially
 result in discovery linkages -- specifically, we looked for sets of
 observations where the object was brighter than SNR=5 on 3 separate
-nights inside of a 15 night window, where in each night the
+nights inside of a 15 night window, where in each night a pair of
 observations were separated by at least 15 minutes and less than 90
 minutes.
+
+.. figure:: /_static/hmag_tco.png
+   :name: fig-hmag-tco
+   :target: ../../_static/hmag_tco.png
+
+   The absolute magnitude (H magnitude) distribution of all TCOs in
+   the simulated population, the subset with epochs (approximately
+   representing their temporary capture time) during the 10 years
+   representing the survey lifetime, and the subset of objects which
+   produced a series of observations matching the discovery criteria
+   (3 nights with pairs of observations within a 15 night
+   window).
+
+
+.. figure:: /_static/hmag_tcf.png
+   :name: fig-hmag-tcf
+   :target: ../../_static/hmag_tcf.png
+
+   The absolute magnitude (H magnitude) distribution of all TCFs in
+   the simulated population, the subset with epochs (approximately
+   representing their temporary capture time) during the 10 years
+   representing the survey lifetime, and the subset of objects which
+   produced a series of observations matching the discovery criteria
+   (3 nights with pairs of observations within a 15 night window).
+
 
 
 MOPS Results
