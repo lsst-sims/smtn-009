@@ -18,6 +18,10 @@ doc_title: 'Minimoons and LSST'
 # Author names, ordered as a list. Each author name should be formatted as 'First Last'
 authors:
     - 'Lynne Jones'
+    - 'Grigori Fedorets'
+    - 'Mikael Granvik'
+    - 'Joachim Moeyens'
+
 
 # Current document revision date, YYYY-MM-DD
 # Only set this field if you need to manually fix the revision date;
