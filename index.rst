@@ -151,7 +151,17 @@ greater than 5 (assuming a 5-sigma limiting magnitude of *r*=24.5 for all
 observations).
 
 Only some tracklets are linked by MOPS. Characteristics of linkable
-tracklets.
+tracklets?
+
+With the simple criteria of 3 pairs of (SNR>5) observations on 3
+separate nights within 15 nights, for TCOs there were 2357 findable
+out of 20272 objects total; for TCFs there were 2118 findable out of
+31385 objects total.  With our current version of MOPS (with
+parameters we set up to find NEOs), we managed to link 36 TCOs and 41
+TCFs (which is not great, but is actually very encouraging that we
+found any at all without doing anything to tune MOPS to find
+minimoons.
+
 
 
 Useful questions
