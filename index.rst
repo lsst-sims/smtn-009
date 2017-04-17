@@ -113,6 +113,10 @@ nights inside of a 15 night window, where in each night a pair of
 observations were separated by at least 15 minutes and less than 90
 minutes.
 
+Discoveries over time.
+Velocity distribution of observations.
+What objects are findable (H distribution, orbital distribution).
+
 .. figure:: /_static/hmag_tco.png
    :name: fig-hmag-tco
    :target: ../../_static/hmag_tco.png
@@ -146,6 +150,57 @@ We created inputs for MOPS from all observations where the SNR was
 greater than 5 (assuming a 5-sigma limiting magnitude of *r*=24.5 for all
 observations).
 
+Only some tracklets are linked by MOPS. Characteristics of linkable
+tracklets.
+
+
+Useful questions
+================
+
+While investigating LSST capabilities in regard to minimoon detection,
+I found I had the following questions, which are useful to document
+for future tool development.
+
+- What is the expected rate of object discovery? This can be addressed
+  with MAF :py:mod:`lsst.sims.maf.metrics.DiscoveryMetric` and its
+  related child metrics can tell you about when objects are
+  discovered, how many opportunities for discovery the objects have,
+  and the spatial distribution of the discoveries.
+
+- Why are some objects not discoverable? This is often just because
+  they are too faint, but if some bright objects are not discoverable
+  or there is a long tail of faint objects which are discovered (while
+  others are not), then this becomes a question worthy of more
+  investigation. Probably has something to do with the orbital
+  characteristics of the objects, and so looking at metric values with the
+  :py:mod:`lsst.sims.maf.plots.MetricVsOrbit` and
+  :py:mod:`lsst.sims.maf.plots.MetricVsOrbitPoints` plots is useful
+  (but still users may want their own custom versions).
+
+- For a given subset of objects (defined by orbital characteristics,
+  physical characteristics like H magnitude or color, or by their
+  metric values), what does their resulting metric value distribution
+  or orbital characteristics look like? Example: choose all objects
+  with orbital epoch in a given range, and then plot their H magnitude
+  distribution, for both 'found' and 'all' objects (i.e. include a
+  metric result). Example: plot orbital distribution for all objects,
+  and then also for all 'found' objects. These capabilities are
+  important, particularly to understand metric values for subsets of
+  objects.
+
+- Only a small subset of objects were actually linked by MOPS, out of
+  all the objects which would have been findable. Understanding why
+  these objects in particular were linked was difficult. There may be
+  more tools in the MOPS analysis toolkit. (look into this). 
+
+- When looking at when MOPS could or couldn't link the detections of
+  an object, it was useful to plot all detections, then color-code the
+  detections which matched the discovery criteria, then further
+  color-code the detections which MOPS actually did link. These plots
+  are useful to visualize in RA/Dec space, as well as velocity and
+  acceleration values for the detections or windows, to look for
+  reasons why MOPS may have failed to link some potential tracklets or
+  tracks.
 
 
 References
