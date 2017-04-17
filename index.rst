@@ -202,6 +202,14 @@ for future tool development.
   reasons why MOPS may have failed to link some potential tracklets or
   tracks.
 
+- For MOPS development, it will be useful to estimate how many
+  recovery detections will be available for each object after linking,
+  as well as how many recovery detections you might have per day
+  across the whole population. This could be done with MAF, but is not
+  currently available as a metric. Metrics across the entire
+  population on a 'per day' kind of basis are not currently easy and
+  should be developed further.
+  
 
 References
 ==========
